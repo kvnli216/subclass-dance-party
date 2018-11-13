@@ -1,5 +1,6 @@
 body, html{
   height:100%;
+  width:100%;
 }
 body{
   margin: 0px;
@@ -29,7 +30,7 @@ body, a:link, a:visited, a:active{
   border:10px solid white;
   border-radius:10px;
   position:absolute;
-  
+
 }
 .kevin{
   border:10px solid green;

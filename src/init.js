@@ -25,14 +25,34 @@ $(document).ready(function() {
     var dancer = new dancerMakerFunction(
         $("body").height() * Math.random(),
         $("body").width() * Math.random(),
-        Math.random() * 1000
+        // Math.random() * 
+        1000
       );
-
+    dancers.push(dancer);
     $('body').append(dancer.$node);
   });
 
-  $('.addDancerButton').on('click', function(event) {
-    alert("online");
+
+  $('.Lineupbutton').on('click', function(event) {
+    var height = ( $("body").height() ) / 2;
+    var width = ( $("body").width() );
+    debugger;
+    var increment = Math.ceil( width / (dancers.length+1) );
+    var startPoint = increment;
+
+    // loop through each dancer
+    for( var i = 0 ; i < dancers.length; i++) {
+      // call line up method on each dancer
+
+
+      dancers[i].setPosition(height, startPoint);
+      startPoint += increment;
+    }
+    
   });
+
+
+
+
 });
 
