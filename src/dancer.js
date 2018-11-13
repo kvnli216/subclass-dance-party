@@ -3,14 +3,13 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
   this.$node = $('<span class="dancer"></span>');
-  this.step;
+  // this.step;
   // this.setPosition(this.top, this.left);
 };
 
 makeDancer.prototype.step = function() {
   // the basic dancer doesn't do anything interesting at all on each step,
   // it just schedules the next step
-
   setTimeout(this.step, this.timeBetweenSteps);
 };
   
