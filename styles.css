@@ -25,3 +25,15 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.ammar{
+  border:10px solid white;
+  border-radius:10px;
+  position:absolute;
+  
+}
+.kevin{
+  border:10px solid green;
+  border-radius:10px;
+  position:absolute;
+
+}
