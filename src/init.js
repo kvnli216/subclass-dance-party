@@ -29,15 +29,13 @@ $(document).ready(function() {
       );
 
     dancers.push(dancer);
-    // console.log(dancer.class);
     $('body').append(dancer.$node);
-    debugger;
   });
 
 ///////////////////////////////////////////////////////////////////////////////////
 
   $('.Lineupbutton').on('click', function(event) {
-    var height = ( $("body").height() ) / 2;
+    var height = ( $("body").height() ) / 1.5;
     var width = ( $("body").width() );
     var increment = Math.ceil( width / (dancers.length+1) );
     var startPoint = increment;
@@ -60,8 +58,8 @@ $(document).ready(function() {
     var minWidth2 = centerPoint2 - 100;
     var maxWidth1 = centerPoint1 + 100;
     var maxWidth2 = centerPoint2 + 100;
-    var minHeight = height/2 - 100;
-    var maxHeight = height/2 + 100;
+    var minHeight = height/1.5 - 100;
+    var maxHeight = height/1.5 + 100;
 
     // loop through the dancers
     for( var i = 0 ; i < dancers.length; i++) {
