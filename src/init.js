@@ -27,14 +27,11 @@ $(document).ready(function() {
         $("body").width() * Math.random(),
         Math.random() * 1000
       );
+
     dancers.push(dancer);
+    // console.log(dancer.class);
     $('body').append(dancer.$node);
-  });
-
-///////////////////////////////////////////////////////////////////////////////////
-
-  $('.makeDancer').on('click', function(event) { //LEFT OFF HERE
-    alert("hi");
+    debugger;
   });
 
 ///////////////////////////////////////////////////////////////////////////////////

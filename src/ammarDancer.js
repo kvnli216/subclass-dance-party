@@ -12,10 +12,6 @@ makeAmmarDancer.prototype.constructor = makeAmmarDancer;
 
 makeAmmarDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
-  this.timeBetweenSteps = 1000;
-  var t = $("body").height() * Math.random();
-  var l = $("body").width() * Math.random();
-  this.setPosition(t,l);
   makeDancer.prototype.step.call(this);
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and

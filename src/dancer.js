@@ -8,6 +8,9 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
   this.$node = $('<span class="dancer"></span>');
+  this.$node.on('click', function(event) { //LEFT OFF HERE
+    alert('Hello World!');
+  });
   this.step();
   this.setPosition(this.top, this.left);
 };

@@ -20,7 +20,6 @@ describe('blinkyDancer', function() {
 
   describe('dance', function() {
     it('should call step at least once per second', function() {
-      debugger;
       sinon.spy(blinkyDancer, 'step');
       expect(blinkyDancer.step.callCount).to.be.equal(0);
       clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
@@ -30,6 +29,12 @@ describe('blinkyDancer', function() {
 
       clock.tick(timeBetweenSteps);
       expect(blinkyDancer.step.callCount).to.be.equal(2);
+    });
+  });
+
+  describe('instance of makeDancer (written by Kevin and Ammar)', function() {
+    it('should be an instanceof dancer', function() {
+      expect(blinkyDancer instanceof makeDancer).to.be.equal(true);
     });
   });
 });

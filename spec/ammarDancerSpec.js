@@ -32,4 +32,10 @@ describe('ammarDancer', function() {
       expect(ammarDancer.step.callCount).to.be.equal(2);
     });
   });
+
+  describe('instance of makeDancer (written by Kevin and Ammar)', function() {
+    it('should be an instanceof dancer', function() {
+      expect(ammarDancer instanceof makeDancer).to.be.equal(true);
+    });
+  });
 });

@@ -26,6 +26,8 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+  width: 100px;
+  height: 100px;
 }
 .ammar{
   border:10px solid white;
