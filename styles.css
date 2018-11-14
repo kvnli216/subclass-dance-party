@@ -4,7 +4,8 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url("dancefloor.JPG");
+  background-size: cover; 
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{

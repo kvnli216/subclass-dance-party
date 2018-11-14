@@ -25,8 +25,7 @@ $(document).ready(function() {
     var dancer = new dancerMakerFunction(
         $("body").height() * Math.random(),
         $("body").width() * Math.random(),
-        // Math.random() * 
-        1000
+        Math.random() * 1000
       );
     dancers.push(dancer);
     $('body').append(dancer.$node);
@@ -36,23 +35,44 @@ $(document).ready(function() {
   $('.Lineupbutton').on('click', function(event) {
     var height = ( $("body").height() ) / 2;
     var width = ( $("body").width() );
-    debugger;
     var increment = Math.ceil( width / (dancers.length+1) );
     var startPoint = increment;
-
-    // loop through each dancer
     for( var i = 0 ; i < dancers.length; i++) {
-      // call line up method on each dancer
-
-
       dancers[i].setPosition(height, startPoint);
       startPoint += increment;
     }
-    
   });
 
+  $('.Clusterbutton').on('click', function(event) {
+    var height = $("body").height();
+    var width = $("body").width();
+  
+    var centerPoint1 = width/4;
+    var centerPoint2 = 3*width/4;
 
+    var minWidth1 = centerPoint1 - 100;
+    var minWidth2 = centerPoint2 - 100;
+    var maxWidth1 = centerPoint1 + 100;
+    var maxWidth2 = centerPoint2 + 100;
+    var minHeight = height/2 - 100;
+    var maxHeight = height/2 + 100;
 
-
+    // loop through the dancers
+    for( var i = 0 ; i < dancers.length; i++) {
+    //   locate which centerPoint the dancer is closer to
+      let leftPosition = dancers[i].left;
+      //dancer is closer to centerPoint1
+      if (Math.abs(centerPoint1 - leftPosition) < Math.abs(centerPoint2 - leftPosition)) {
+        var tempWidth = Math.floor(Math.random() * (maxWidth1 - minWidth1 + 1)) + minWidth1;
+        var tempHeight = Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight;
+        dancers[i].setPosition(tempHeight, tempWidth);
+        //dancer is closer to the centerPoint2
+      } else { 
+        var tempWidth = Math.floor(Math.random() * (maxWidth2 - minWidth2 + 1)) + minWidth2;
+        var tempHeight = Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight;
+        dancers[i].setPosition(tempHeight, tempWidth);
+      }
+    }
+  });
 });
 
