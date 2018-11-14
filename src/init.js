@@ -31,6 +31,13 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
   });
 
+///////////////////////////////////////////////////////////////////////////////////
+
+  $('.makeDancer').on('click', function(event) { //LEFT OFF HERE
+    alert("hi");
+  });
+
+///////////////////////////////////////////////////////////////////////////////////
 
   $('.Lineupbutton').on('click', function(event) {
     var height = ( $("body").height() ) / 2;
@@ -42,6 +49,8 @@ $(document).ready(function() {
       startPoint += increment;
     }
   });
+
+  ///////////////////////////////////////////////////////////////////////////////////
 
   $('.Clusterbutton').on('click', function(event) {
     var height = $("body").height();
@@ -74,5 +83,9 @@ $(document).ready(function() {
       }
     }
   });
+///////////////////////////////////////////////////////////////////////////////////
+
+
+
 });
 
